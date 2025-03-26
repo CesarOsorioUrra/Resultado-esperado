@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+
+	<link rel="stylesheet" type="text/css" href="./css/reset-styles.css"> <!--se pone porque navegador por defecto agrega algunos padding que hace que los elementos no se vean adecuadamente-->
+	<!--css reset tambien elimina los puntos de las listas-->
+	<!--<link rel="stylesheet" type="text/css" href="./css/styles.css">--> <!--ruta relativa para archivo con css-->
+
+<style type="text/css">
+	*{
+	font-family: arial;
+	}
+
+	
+	/*nav es un elemento en bloque, ocupa el 100% del ancho*/
+	nav{
+		position: fixed;
+		background-color: #192048;
+		color: white;
+		width: 100%;
+		height: 70px;
+		display: flex; /*hace que elementos sean en linea, se apilen hacia al lado. Siempre va en la etiqueta padre. hace que los elementos que usaban el ancho de la pantalla solo usen el espacio del tamaño del elemento*/
+		justify-content: space-between;
+		/*padding: 20px; padding de 20 px por todos los lados*/
+	}
+		li{
+		display: inline-block;
+		padding: 20px;
+	}
+	.input{
+		border-radius: 4px; 
+		color: #2d3357; 
+		background-color: white; 
+		margin-bottom: 1rem; 
+		width:10rem; 
+		height: 2rem;
+	}
+	.tabla{
+		text-align: center; 
+		border: 3px solid black; 
+		border-radius: 6px;
+		margin-right: 1rem;
+		padding:0.5rem;
+	}
+	.container0{ /*contenedor principal de contenido*/
+		display: flex;
+		flex-direction: row;
+		padding-top: 70px; /*padding arriba para que no lo tape el nav*/
+		padding-bottom: 111.965px; /*padding abajo para que no lo tape el footer*/
+	}
+	.container1{
+		display: flex;
+		flex-direction: column;
+		padding: 2rem;
+	}
+	.container2{
+		display: flex;
+		flex-direction: column;
+		padding: 2rem;
+	}
+	.container3{
+		display: flex;
+		flex-direction: row;
+	}
+	.container4{
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr 8fr;
+		padding: 0.5rem;
+		margin-top: 1rem;
+	}
+	.container5{
+		display: flex;
+		justify-content: center;
+		padding-bottom: 2rem;
+	}
+	footer{
+		/*margin-left: -8px;*/ /*padding eliminado por el css reset*/ 
+		position: fixed;
+		bottom: 0; 
+		width: 100%;
+		color: lightgray; 
+		background-color: #505a8c;
+	}
+</style>
+</head>
+<body>
+
+<!-- ul unsorted list se prefijan con puntos, ol ordered list se prefija con numeros-->
+
+<nav>
+	<ul> <!--ul es unsorted list, li son los elementos. ol es ordered list-->
+		<li><img src="iconos navbar/1.png" width="14rem" height="14rem" style="margin-inline: 0.3rem;">Categoría de productos</li>
+		<li><img src="iconos navbar/2.png" width="14rem" height="14rem" style="margin-inline: 0.3rem;">Mi cuenta</li>
+	</ul>
+	<ul>
+		<li><img src="iconos navbar/3.png" width="14rem" height="14rem" style="margin-inline: 0.3rem;">Mi carrito</li>
+	</ul>
+</nav>
+
+<div class="container0">
+	<div class="container1">
+		<h1>Filtros</h1>
+		<input type="text" name="" placeholder="Buscar">
+		<h2>Color</h2>
+
+		<p>
+		<input type="checkbox" name="" value="Rojo">
+		<label for="Rojo">Rojo</label>
+		</p>
+
+		<p>	
+		<input type="checkbox" name="" value="Azul">
+		<label for="Azul">Azul</label>
+		</p>
+
+		<p>
+		<input type="checkbox" name="" value="Verde">
+		<label for="Verde">Verde</label>		
+		</p>
+
+		<p>
+		<input type="checkbox" name="" value="Purpura">
+		<label for="Purpura">Purpura</label>
+		</p>
+
+		<h2>Talla</h2>
+		<p>			
+		<input type="checkbox" name="" value="S">
+		<label for="S">S</label>
+		</p>
+
+		<p>	
+		<input type="checkbox" name="" value="M">
+		<label for="M">M</label>
+		</p>
+
+		<p>
+		<input type="checkbox" name="" value="X">
+		<label for="X">X</label>
+		</p>
+
+		<p>
+		<input type="checkbox" name="" value="XL">
+		<label for="XL">XL</label>
+		</p>
+
+		<p>
+		<input type="button" name="" value="Aplicar filtros" style="background-color: midnightblue; color: white; border-radius: 4px; margin-top: 1rem; padding: 0.5rem;">
+		</p>
+	</div> 
+
+
+	<div class="container2">
+		<h1>Productos vistos recientemente</h1>
+		<div class="container3">
+			<div class="tabla">				
+				<h2>Titulo producto</h2>			
+				<img src="https://png.pngtree.com/png-vector/20190329/ourlarge/pngtree-vector-shopping-bag-icon-png-image_889429.jpg" width="200" height="200">				
+				<p>Descripción del producto.</p>
+				<p>Si, es una descripción.</p>
+				<h2>$1000</h2>
+				<input type="button" name="" value="Agregar al carrito" class="input">
+			</div>
+
+			<div class="tabla">				
+				<h2>Titulo producto</h2>			
+				<img src="https://png.pngtree.com/png-vector/20190329/ourlarge/pngtree-vector-shopping-bag-icon-png-image_889429.jpg" width="200" height="200">				
+				<p>Descripción del producto.</p>
+				<p>Si, es una descripción.</p>
+				<h2>$1000</h2>
+				<input type="button" name="" value="Agregar al carrito" class="input">
+			</div>
+
+			<div class="tabla">				
+				<h2>Titulo producto</h2>			
+				<img src="https://png.pngtree.com/png-vector/20190329/ourlarge/pngtree-vector-shopping-bag-icon-png-image_889429.jpg" width="200" height="200">				
+				<p>Descripción del producto.</p>
+				<p>Si, es una descripción.</p>
+				<h2>$1000</h2>
+				<input type="button" name="" value="Agregar al carrito" class="input">
+			</div>
+
+			<div class="tabla">				
+				<h2>Titulo producto</h2>			
+				<img src="https://png.pngtree.com/png-vector/20190329/ourlarge/pngtree-vector-shopping-bag-icon-png-image_889429.jpg" width="200" height="200">				
+				<p>Descripción del producto.</p>
+				<p>Si, es una descripción.</p>
+				<h2>$1000</h2>
+				<input type="button" name="" value="Agregar al carrito" class="input">
+			</div>
+
+			<div class="tabla">				
+				<h2>Titulo producto</h2>			
+				<img src="https://png.pngtree.com/png-vector/20190329/ourlarge/pngtree-vector-shopping-bag-icon-png-image_889429.jpg" width="200" height="200">				
+				<p>Descripción del producto.</p>
+				<p>Si, es una descripción.</p>
+				<h2>$1000</h2>
+				<input type="button" name="" value="Agregar al carrito" class="input">
+			</div>
+		</div>
+
+
+		<h1>Ofertas relampago</h1>
+		<div class="container3">
+			<div class="tabla">				
+				<h2>Titulo producto</h2>			
+				<img src="https://png.pngtree.com/png-vector/20190329/ourlarge/pngtree-vector-shopping-bag-icon-png-image_889429.jpg" width="200" height="200">				
+				<p>Descripción del producto.</p>
+				<p>Si, es una descripción.</p>
+				<h2>$1000</h2>
+				<input type="button" name="" value="Agregar al carrito" class="input">
+			</div>
+
+			<div class="tabla">				
+				<h2>Titulo producto</h2>			
+				<img src="https://png.pngtree.com/png-vector/20190329/ourlarge/pngtree-vector-shopping-bag-icon-png-image_889429.jpg" width="200" height="200">				
+				<p>Descripción del producto.</p>
+				<p>Si, es una descripción.</p>
+				<h2>$1000</h2>
+				<input type="button" name="" value="Agregar al carrito" class="input">
+			</div>
+
+			<div class="tabla">				
+				<h2>Titulo producto</h2>			
+				<img src="https://png.pngtree.com/png-vector/20190329/ourlarge/pngtree-vector-shopping-bag-icon-png-image_889429.jpg" width="200" height="200">				
+				<p>Descripción del producto.</p>
+				<p>Si, es una descripción.</p>
+				<h2>$1000</h2>
+				<input type="button" name="" value="Agregar al carrito" class="input">
+			</div>
+
+			<div class="tabla">				
+				<h2>Titulo producto</h2>			
+				<img src="https://png.pngtree.com/png-vector/20190329/ourlarge/pngtree-vector-shopping-bag-icon-png-image_889429.jpg" width="200" height="200">				
+				<p>Descripción del producto.</p>
+				<p>Si, es una descripción.</p>
+				<h2>$1000</h2>
+				<input type="button" name="" value="Agregar al carrito" class="input">
+			</div>
+
+			<div class="tabla">				
+				<h2>Titulo producto</h2>			
+				<img src="https://png.pngtree.com/png-vector/20190329/ourlarge/pngtree-vector-shopping-bag-icon-png-image_889429.jpg" width="200" height="200">				
+				<p>Descripción del producto.</p>
+				<p>Si, es una descripción.</p>
+				<h2>$1000</h2>
+				<input type="button" name="" value="Agregar al carrito" class="input">
+			</div>
+		</div>
+
+	</div>
+</div> 
+
+<footer>
+	<div class="container4">
+		<p>Celular</p>
+		<p>Dirección</p>
+		<p>+569 0000 0000</p>
+		<p>Alguna dirección #58, Concepción</p>
+	</div>
+	<div class="container5">
+		<p style="text-align: center;">&copy; 2025 Mi tiendita bonita</p>
+	</div>
+</footer>
+
+</body>
+</html>
